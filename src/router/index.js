@@ -11,7 +11,7 @@ import EditProduct from '../views/Product/EditProduct'
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'HomeView',
     component: HomeView
   },
   {

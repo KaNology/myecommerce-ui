@@ -10,11 +10,13 @@
   @fetchData="fetchData"
   >
   </router-view>
+  <FooterComp></FooterComp>
 </template>
 
 <script>
 import axios from 'axios';
 import NavbarComp from './components/NavbarComp.vue';
+import FooterComp from './components/FooterComp.vue';
 
 export default {
     data() {
@@ -41,7 +43,7 @@ export default {
     mounted() {
         this.fetchData();
     },
-    components: { NavbarComp }
+    components: { NavbarComp, FooterComp }
 }
 </script>
 
