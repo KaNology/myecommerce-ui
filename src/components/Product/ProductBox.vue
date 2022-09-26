@@ -1,8 +1,10 @@
 <template>
     <div class="card w-100 h-100" style="margin-top: 10px">
-        <div class="embed-responsive embed-responsive-16by9">
-            <img class="card-img-top embed-responsive-item" :src="product.imageURL" alt="Card image cap" />
-        </div>
+        <router-link :to="{name: 'DetailProduct', params: {id: product.id}}">
+            <div class="embed-responsive embed-responsive-16by9">
+                <img class="card-img-top embed-responsive-item" :src="product.imageURL" alt="Card image cap" />
+            </div>
+        </router-link>
 
         <div class="card-body">
             <h5 class="card-title">{{product.name}}</h5>
@@ -24,7 +26,7 @@ export default {
 </script>
 
 <style scoped>
-    .card-img-top {
-        object-fit: cover;
-    }
+.card-img-top {
+    object-fit: cover;
+}
 </style>
